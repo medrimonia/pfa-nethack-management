@@ -1,0 +1,45 @@
+##### Création des modes #####
+
+
+### 1 patch par mode ###
+
+# Avantages #
+Définition des modes très claire
+Modification les plus légères sur le système
+Taille des binaires
+Clarté des patchs
+
+# Inconvénients #
+Pour changer de mode, il faut :
+		 - annuler le patch actuel
+     - appliquer le patch pour le mode voulu
+		 - recompiler le jeu
+Recompilation à chaque changement
+
+### 1 patch pour l'ensemble avec options de compilation ###
+
+# Avantages #
+Taille du binaire
+Pas besoin de changer de patchs pour changer de mode
+Permet de revenir au mode classique sans annuler les patchs
+
+# Inconvénients #
+Recompilation à chaque changement de mode
+Beaucoup de #if
+
+### 1 patch pour l'ensemble avec options d'exécution ###
+
+# Avantages #
+Pas de recompilation lors des changements entre les modes
+Possibilité de revenir au mode classique sans recompilation
+
+# Inconvénients #
+Taille du binaire
+Spécification des options à chaque exécution
+Ajout d'options d'exécution
+
+
+### Remarques ###
+Possibilité de développer en optique 1 patch par mode, puis de retravailler une version afin de permettre un déploiement en patch unique aussi.
+
+Alias regroupant plusieurs patchs = 1 mode

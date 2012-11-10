@@ -1,0 +1,63 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+
+\geometry{margin=2cm}
+
+\newcommand {\ST}{Sven Taton}
+\newcommand {\QL}{Qiwen Lu}
+\newcommand {\LL}{Louis Leclec'h}
+\newcommand {\DB}{David Bitonneau}
+\newcommand {\AH}{Arthur Havlicek}
+\newcommand {\BR}{Benoit Ruelle}
+\newcommand {\LH}{Ludovic Hofer}
+
+\begin{document}
+
+\section*{PFA-Nethack : Compte-rendu de la seconde rencontre avec le Responsable pédagogique}
+
+\subsection*{Presents}
+\begin{itemize}
+\item \QL
+\item \LL
+\item \DB
+\item \BR
+\item \LH
+\end{itemize}
+
+\subsection*{Organisation du dépôt git}
+Des remarques ont été formulées par le responsable pédagogique à propos de l'organisation du dépôt git.
+\begin{itemize}
+\item Créer différentes branches qui n'ont pas vocation à être rassemblées n'est pas une pratique courante, il nous a donc été conseillé pour de prochains projets de créer plusieurs dépôts différents dans notre cas de figure (un dépôt pour le code, un dépôt pour la gestion de projet)\footnote{Comme ce problème n'est pas si gênant, nous n'allons pas changer l'architecture actuelle, cependant, nous allons prendre en compte cette remarque pour nos choix futurs}
+\item Les noms utilisés pour certaines branches sont inadaptés car trop compliqués\footnote{Exemple : GestionDeProjet}, il nous a donc été conseillé de choisir des noms plus simple.
+\item Il nous a été suggéré d'augmenter la fréquence des commits afin que le contenu arrive de manière plus régulière sur le dépôt.
+\end{itemize}
+
+\subsection*{Script d'installation}
+Le script d'installation nous a été décrit comme étant un bon point par le responsable pédagogique, cependant quelques détails sont à améliorer. Comme le fait que l'emplacement de l'installation soit personnalisable, de façon à l'installer éventuellement dans la branche, en utilisant un gitignore pour simplifier le développement.
+
+\subsection*{Mode de développement}
+Notre choix de mode de développement personnalisé\footnote{Mais assez classique tout de même} a été validé par le responsable pédagogique qui nous a tout de même conseillé de nous accorder avec le client sur la fréquence des réunions avec le client\footnote{ces réunions seront appelées des délivrables}.
+
+\subsection*{Architecture}
+Nous avons présenté un diagramme d'architecture au responsable pédagogique, cela lui a permis de nous faire des remarques et de le faire évoluer afin qu'il soit plus clair et plus adapté.
+
+\subsection*{Historique}
+Plusieurs possibilités nous ont été suggérées pour l'historique, une étant de stocker la graine aléatoire utilisée, il est nécessaire de vérifier si cette possibilité est valable sur nethack, une autre étant de stocker uniquement les différentes entrées sur l'interface pour pouvoir rejouer la partie à l'aide de ceci. Le concept clé qui nous a été transmis par le responsable pédagogique est de réutiliser notre interface afin de nous servir du code qui devra de toute façon exister pour créer l'outil de replay.\\
+Le tâche de la création d'un historique étant non-négligeable et celui-ci ne faisant pas partie des besoins exprimés par le client, il est nécessaire de discuter sa création avec le client afin de ne pas effectuer un travail qui n'est pas désiré. On peut distinguer trois niveaux d'historique.
+\begin{itemize}
+\item Resultat : Seuls les résultats de la partie sont enregistrés, ce type est destiné uniquement à l'utilisation de statistiques\footnote{Si conserver la graine aléatoire permet de rejouer la partie, ce type d'enregistrement permettra de rejouer une partie, si les exécutables sont conservés}. {\em Taille estimée : < 1 ko}
+\item Déroulement : Les entrées de l'interface sont enregistrées, ce type d'information permet à coup sûr de rejouer une partie, sans avoir besoin d'avoir accès aux exécutables. {\em Taille estimée : < 1 Mo}
+\item Complète : Le déroulement est sauvegardé, mais aussi les sorties du bot \footnote{stdout, stderr}, ce type d'historique est utile à des fins de débug. {\em Taille estimée : > 1 Mo}
+\end{itemize}
+
+\subsection*{Base de données}
+Notre choix de se servir d'une base de données pour stocker les résultats des parties n'ayant pas été réellement justifié dans nos fichiers de choix, nous en avons discuté avec le responsable pédagogique. Il nous a mis en garde contre des choix fait trop à la va vite et a insister sur le fait qu'il fallait bien les justifier et tenter d'être impartial. Après avoir débattu sur le sujet, notre choix est resté le même, mais les raisons pour lequel nous l'avions choisis étaient plus claires, même pour nous.
+
+\subsection*{Prochaine réunion}
+Il a été défini que la prochaine réunion aurait lieu le lundi 19 novembre à 16h30. Il nous a été demandé de préparer un plan du document de spécification, à détailler si possible. La liste des besoins est aussi à faire au plus vite et à discuter avec le client.
+
+\end{document}

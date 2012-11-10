@@ -1,0 +1,23 @@
+- Tâches
+	-> Ajouts de tâches?
+		 -> OK
+	-> Comment faire les estimations
+		 -> jours hommes
+	-> Estimations à voir en groupe
+		 -> OK
+	-> Attributions
+		 -> Protocole + tâche ou diversifié
+- Choix à faire :
+	-> stockage statistiques
+	-> méthode dév.
+	-> méthode de création des modes
+	-> méthode déploiement
+	-> ordre de dév
+		 -> modes en parallèle ou explo d'abord
+		 -> 1 mode après l'autre unanimité de la présence
+- Diagrammes :
+	-> Séquence
+		 
+- git :
+	-> politique à définir
+		 -> On ne merge pas ses propres modifs sur master

@@ -1,0 +1,24 @@
+##### Stockage des statistiques #####
+
+
+### Fichier de sortie ###
+
+# Avantages #
+Assez simple à réaliser
+
+# Inconvénients #
+Difficile de rassembler différentes expériences
+Fortement conditionné par les souhaits d'analyse initiaux
+
+### Base de données ###
+
+# Avantages #
+Possibilité d'ajouter des parties peu à peu
+Permet des analyses diverses très facilement
+
+# Inconvénients #
+Lourd à mettre en place
+Emplacement de la base de données à définir
+
+
+Base de données 6-0

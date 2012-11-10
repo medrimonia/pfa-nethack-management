@@ -1,0 +1,12 @@
+##### Patch (vs Classique) #####
+
+### Avantages ###
+Meilleur lisibilité des modifications.
+Plus facilement adaptable s'il y a des changements sur nethack
+
+
+### Inconvénients ###
+Nécessite quelques connaissances sur les patchs (à acquérir pour certains, à partager pour d'autres)
+
+# Décision
+Pas de code nethack modifié, mais éventuellement archive ou code original

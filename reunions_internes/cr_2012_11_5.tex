@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+
+\geometry{margin=2cm}
+
+
+\newcommand {\ST}{Sven Taton}
+\newcommand {\QL}{Qiwen Lu}
+\newcommand {\LL}{Louis Leclec'h}
+\newcommand {\DB}{David Bitonneau}
+\newcommand {\AH}{Arthur Havlicek}
+\newcommand {\BR}{Benoit Ruelle}
+\newcommand {\LH}{Ludovic Hofer}
+
+\begin{document}
+
+\section*{PFA-Nethack : Compte-rendu de la réunion interne du 5 novembre 2012}
+
+\subsection*{Présents}
+\begin{itemize}
+\item \ST
+\item \LL
+\item \DB
+\item \AH
+\item \BR
+\item \LH
+\end{itemize}
+
+\subsection*{Tâches}
+En accord commun, certaines tâches oubliées ont été ajoutées à la liste, principalement concernant l'historique des parties et le replay.\\
+La planification à l'aide de planner a été acceptée par les présents et il a été décidé que les estimations utilisées seraient décrites en nombre de jours nécessaires pour réaliser la tâche seul.\\
+Les estimations ont été revues ensemble afin que tout le monde les approuve.\\
+Des tâches ont été attribuées pour une durée d'environ 1 mois.
+
+\subsection*{Stockage des statistiques}
+Il a été décidé à l'unanimité des présents que nous utiliserions une base de données pour stocker le résultat des parties qui nous serviront à faire des statistiques.
+
+\subsection*{Méthode de développement}
+Après discussion, la méthode Scrum n'a pas été retenue, car nous considérons qu'elle est peu adaptée à notre projet. Nous avons décidé de nous servir de la planification que nous avons effectuée pour vérifier une fois par semaine que l'avancement du projet est conforme à ce qui a été prévu, sans pour autant nous organiser en sprint ou changer les objectifs à chaque fois, la dépendance entre nos différentes tâches étant très forte.
+
+\subsection*{Méthode de création des modes}
+Il a été décidé que nous partions sur un principe de plusieurs patchs par mode, un mode étant en fait composé de plusieurs patchs à appliquer. Cependant, si nous avons assez de temps à la fin, il est envisagé de présenter une autre version contenant un seul patch qui permettra de choisir le mode à l'exécution du programme.
+
+\subsection*{Méthode de déploiement et gestion git}
+Il a été décidé à l'unanimité des présents qu'aucune version modifiée du code source de nethack serait présente dans la branche master. Celle-ci contiendra plutôt des patchs ainsi que des scripts correspondant à des ensemble de patchs. De plus, il a été décidé que personne n'aurait le droit de pusher ses propres modifications dans master, elles devront forcément être validée par une autre personne.
+
+\subsection*{Ordre de développement}
+Il a été décidé que nous avancerions sur un seul mode dans un premier temps. Dès que celui-ci sera parfaitement opérationnel, nous pourrons ajouter de nouveaux modes et éventuellement en développer en parallèle. Ce choix a été pris afin de ne pas risquer d'avoir aucun mode opérationnel à l'approche de la deadline. Il permet aussi d'avoir plus de marge pour corriger les outils principaux si une des approche a été mal choisie.
+
+\end{document}

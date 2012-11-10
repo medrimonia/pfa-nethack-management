@@ -1,0 +1,44 @@
+Absent :
+AH + ST
+
+Depot git :
+-> bazar
+	 -> installation
+	 -> Gestion de projet
+	 -> master
+	 -> Branche non destinée à être rassemblée ?
+	 		-> À priori les branches ont vocations à être toutes rassemblées
+			-> Mieux de faire deux dépôts à priori
+				 -> Pas si gênant
+		  -> Évocation possibilité de configuration de git simplification, noms peu adapté
+	 -> commit plus fréquent souhaité.
+-> script bien
+	 -> Emplacement personnalisable souhaité
+	 		-> éventuellement dans le projet
+			-> répertoire ignoré par git
+-> Mode de dév
+	 -> notre propre mode -> OK
+	 		-> fréquence réu internes fixées
+		  -> fréquence à définir avec le client (délivrables)
+-> Discussion sur la reprise de TAEB.
+
+-> Architecture
+	 -> Simulateur -> entité
+	 -> Noyau connecté uniquement à interface etc...
+
+-> Historique
+	 -> Graine à stocker si possible
+	 -> Réutiliser l'interface
+	 		-> Outil replay a intégrer avec l'interface
+	 -> À discuter avec le client
+	 -> Travail conséquent
+
+-> Discussion base de donnees
+	 -> Bien penser + justifier les choix
+
+-> Next réunion
+	 -> 19 novembre 16h30
+	 -> À faire :
+	 		-> plan de doc de spécification
+				 -> si possible détaillé
+				 -> liste des besoins à faire vraiment

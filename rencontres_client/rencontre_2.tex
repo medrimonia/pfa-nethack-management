@@ -1,0 +1,57 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+
+\geometry{margin=2cm}
+
+\newcommand {\ST}{Sven Taton}
+\newcommand {\QL}{Qiwen Lu}
+\newcommand {\LL}{Louis Leclec'h}
+\newcommand {\DB}{David Bitonneau}
+\newcommand {\AH}{Arthur Havlicek}
+\newcommand {\BR}{Benoit Ruelle}
+\newcommand {\LH}{Ludovic Hofer}
+
+\begin{document}
+
+\section*{PFA-Nethack : Compte-rendu de la seconde rencontre avec le Responsable pédagogique}
+
+\subsection*{Presents}
+\begin{itemize}
+\item \QL
+\item \AH
+\item \ST
+\item \LL
+\item \DB
+\item \BR
+\item \LH
+\end{itemize}
+
+\subsection*{Présentation}
+Comme convenu lors de la réunion précédente, nous avons commencé par présenter nos avancées au client, nous lui avons donc expliqué les choix que nous avions discuté en groupe ainsi que notre organisation. Il semble donc que le plan que nous avons établi correspond assez bien à ses attentes.
+
+\subsection*{Fréquence de délivrables}
+Le client n'a pas d'exigences particulières concernant la fréquence des délivrables, il préfère cependant que l'on essaie d'avoir assez rapidement une première version fonctionnelle du délivrable, sans avoir besoin qu'elle soit dépourvues de bugs. Cette approche permettra de voir rapidement s'il y a un problème majeur qui empêche de suivre le plan que nous souhaitions réaliser. Il nous a aussi suggérer d'utiliser du code simple afin de valider nos modèles théoriques, que ce soit pour nos protocoles de replay, nos algorithmes pour les bots ou encore d'autres problèmes relativement complexes.
+
+\subsection*{Liste des besoins}
+Nous avons parlé de la liste des besoins avec le client, il nous a expliqué qu'il était volontairement vague tant qu'il avait l'impression que nous n'étions pas perdu sur le sujet et qu'il pensait resserer le sujet si nous étions partis dans une mauvaise direction. Il nous a proposé d'avoir une réunion une ou deux semaines avant le rendu du document de spécification afin de pouvoir le modifier plus facilement si nécessaire.\\
+Il nous a dit qu'il serait satisfait si nous remplissions les exigences suivantes :
+\begin{itemize}
+\item Préparation d'un mode complet avec une description détaillée des modifications effectuées dans le noyau.
+\item Présentation d'un benchmark convaincant sur différents bots s'exécutant sur le même mode, avec une bonne description des stats et une explication des points forts et points faibles des bots.
+\item L'utilisation possible d'un outil de replay et de débogage pour permettre la d'améliorer d'autres bots plus facilement
+\item Il faut avoir la possibilité de jouer sur nethack dans une version modifiée.
+\item Ce doit être facile d'interfacer de nouveaux bots avec le contenu que nous proposerons
+\item Il doit y avoir au moins 2 starter\_package écrits dans des langages différents\footnote{Au moins un langage autre que c et c++ et si possible un des bots en python} afin d'illustrer le fait que les bots ne sont pas limités à un seul langage.
+\end{itemize}
+
+\subsection*{Les bibliothèques}
+Le client nous a suggéré pour un bot en python d'utiliser les bibliothèques networkx et sage, lui-même les utilisant, il apprécierait d'avoir des bots qu'il puisse aisément modifier.
+
+\subsection*{Prochaine réunion}
+Il a été décidé que la prochaine réunion aurait lieu le 21 novembre à 13h30.
+
+\end{document}

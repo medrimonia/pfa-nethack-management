@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+
+\geometry{margin=2cm}
+
+\begin{document}
+
+\section*{PFA-Nethack : Compte-rendu de la première rencontre avec le client}
+
+
+\subsection*{Mises en gardes}
+Nethack étant un jeu composé de multiples facettes, il a été clarifié que le but n'était pas de faire un bot capable de jouer au jeu original, mais que le but était bien de résoudre des sous-problèmes.\\
+Le cadre des sous-problème doit être clairement défini, et les modifications apportées au noyau pour chaque mode doivent être clairement expliquées.\\
+Alterner entre les différents modes doit être assez simple.
+
+\subsection*{Relation avec des problèmes théoriques}
+Le client nous a montré comment il était possible de représenter le problème de recherche de portes secrètes sous une forme théorique. Différents axes possibles pour un tel problème ont été expliqués, illustrant la différence entre la rentabilité à court-terme et celle à long-terme.
+
+\subsection*{Étude des probabilités} 
+Les portes secrètes n'ayant pas la même probabilité d'apparaître à chaque endroit\footnote{Il est impossible de trouver une porte cachée au bord d'un niveau par exemple}, il peut-être intéressant d'étudier la probabilité qu'une case contiennent une porte secrète en fonction de sa position par exemple.
+
+\subsection*{L'évaluation des bots}
+Pour chacun des modes, l'efficacité devra être démontrée par l'emploi de statistiques. Afin d'avoir des résultats pertinent, il est nécessaire de pouvoir générer un grand nombre de parties, il faudra donc que l'exécution d'une partie ne soit pas trop longue.\\
+La comparation pourra par exemple être faite avec des bots aveugles qui choisissent des actions de façon aléatoire.
+
+\subsection*{Interface noyau/bots}
+Le client nous a recommandé de ne pas perdre trop de temps sur la création de l'interface entre le noyau et les bots, de plus il nous a été conseillé de vérifier avant qu'une telle interface n'existait pas\footnote{Le nom de TAEB a été fournis comme base de recherche}.\\
+L'interface devra restreindre les interactions possibles, être ouverte et pourra par exemple être écrite en java, en c ou en python.
+
+\subsection*{Divers}
+Il faudra savoir générer des niveaux aléatoires et éventuellement des niveaux à volonté.\\
+Le client s'est engagé à nous fournir le rapport d'une équipe ayant travaillé sur le même projet il y a 3 ans.\\
+Le client ne s'est pas opposé à ce que notre code soit déposé sur git de manière publique et libre.
+
+\subsection*{Prochaine réunion}
+Il a été défini que la prochaine réunion aurait lieu le mercredi 7 novembre à 13h30. Au début de celle-ci, nous devrons faire un petit exposé en groupe sur ce qui a été fait.
+
+\end{document}

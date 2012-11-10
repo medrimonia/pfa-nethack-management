@@ -1,0 +1,45 @@
+À présenter :
+-> diagramme d'archi logicielle
+-> explication choix systèmes interface
+-> explication choix BDD
+-> explication mode de développement
+-> explication historique
+
+À demander :
+-> liste des besoins
+-> accord mode dév
+-> historique désiré?
+
+
+Notes :
+- Délivrable éventuellement buggé assez rapidement
+- Suggestion : code simple pour valider les méthodes théoriques sur des problèmes techniques
+- Client volontairement vague tant qu'on a pas l'air perdu
+	- Point à faire avec le client un peu avant la fin pour vérifier que le doc convient
+
+-Quand est-ce que ce sera fini
+			 - 1 mode avec description des modifs dans le noyau
+			 	 -> benchmark convaincant
+				 		-> bonne description des stats
+				 		-> dans quel situation
+				 -> outils replays + débogage
+				 -> échec possible si argumenté
+				 -> aspect prédictif
+				 		-> proba d'une salle dans certains endroits de la carte
+						-> plutôt en fin de projet
+
+-> but du mode à définir, éventuellement variable.
+
+-> piste : essayer de délimiter les endroits où on doit être dans le code pour simplifier et détecter les événements inattendus
+	 ->
+
+- Résultat final :
+	-> Possibilité de jouer sur nethack dans une version modifiée
+	-> Interfacée facilement par les bot
+	-> 2 langages par starter_package dont 1 autre que c / c++ de préférence python
+		 -> lib python
+		 -> networkx
+		 -> sage
+
+
+-> README pour expliquer les programmes pour ouvrir les fichier
