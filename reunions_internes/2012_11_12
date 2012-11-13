@@ -1,0 +1,48 @@
+### PLAN ###
+
+- Discussion avancée actuelle
+	-> Recherche de portes : modifs noyau
+		 -> manquants objets
+		 -> retour stats désirées fin de game
+		 -> 25% effectué
+  -> Description mode : recherche porte
+		 -> OK
+	-> Protocole interface avec les bots :
+		 -> Bien avancé
+		 -> À ajouter un exemple de conversation
+		 -> 70 %
+	-> Compréhension I/O nethack
+		 -> OK
+		 -> Deux-trois lignes de documentations
+		 -> 100%
+	-> I/O interface noyau
+		 -> Bonne avancée avec des bugs
+		 -> 25%
+  -> Protocole : interface / bdd
+		 -> débuté
+		 -> 30%
+	-> Protocole Historique Partie :
+		 -> Pas commencé
+  -> Protocole BDD -> affichage de statistiques
+		 -> Pas commencé (à voir avec qiwen absent)
+
+- Gestion travail
+	-> ...
+- Document de spécification
+	-> plan actuel à étudier par chacun pendant la semaine
+	-> proposition/ajout de chacun
+	-> discussion + finalisation à la prochaine réunion
+- Divers
+	-> Point de vue pratique :
+		 -> Que ceux qui ne sont pas habitués lisent un peu de doc sur git
+		 -> outil pull request à étudier comme on a défini
+  -> Mail du client
+		 -> détérminer de manière statique ou dynamique l'aléatoire de la découverte de porte.
+		 -> Améliorer la possibilité de reproduire les résultats
+		 -> Manière de limiter l'aléatoire pour mieux comparer le bot.
+		 		-> Nécessaire d'avoir un grand nombre de map
+				-> Toutes les maps n'ont pas la même "difficulté"
+		-> Modifications importantes sur le code
+		-> À priori on utilisera pas cette solution pour les simulations
+		-> À envisager quand le premier bot tournera
+		

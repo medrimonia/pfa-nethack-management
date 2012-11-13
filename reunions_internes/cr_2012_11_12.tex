@@ -1,0 +1,81 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+
+\geometry{margin=2cm}
+
+
+\newcommand {\ST}{Sven Taton}
+\newcommand {\QL}{Qiwen Lu}
+\newcommand {\LL}{Louis Leclec'h}
+\newcommand {\DB}{David Bitonneau}
+\newcommand {\AH}{Arthur Havlicek}
+\newcommand {\BR}{Benoit Ruelle}
+\newcommand {\LH}{Ludovic Hofer}
+
+\begin{document}
+
+\section*{PFA-Nethack : Compte-rendu de la réunion interne du 5 novembre 2012}
+
+\subsection*{Présents}
+\begin{itemize}
+\item \LL
+\item \BR
+\item \AH
+\item \ST
+\item \DB
+\item \LH
+\end{itemize}
+
+\subsection*{Tâches}
+Un point a été fait sur les tâches qui étaient sensées être commencées ou terminées pendant la semaine.
+
+\subsubsection*{Recherche de portes : modifications du noyau}
+Du travail a été effectué, il manque encore la suppression des objets et la récupération des données voulues en fin de partie. La tâche est estimée accomplie à 25 \%.
+
+\subsubsection*{Recherche de portes : description du mode}
+La tâche a bien été effectuée.
+
+\subsubsection*{Protocole de communication : interface et bot}
+Le protocole est assez bien avancé, cependant il manque entre autre l'ajout d'un exemple de conversation. La tâche est estimée accomplie à 25 \%.
+
+\subsubsection*{Compréhension de l'I/O de nethack}
+La tâche est effectuée, mais il a été suggéré d'ajouter quelques lignes de documentation sur le wiki afin de pouvoir s'y réferer.
+
+\subsubsection*{I/O interface noyau}
+Il y a déjà un modèle fonctionnant partiellement pour la gestion de la carte, il présente quelques problèmes, mais illustre déjà un fonctionnement possible. La tâche est estimée accomplie à 25 \%.
+
+\subsubsection*{Protocole de communication : interface et base de données}
+Le protocole a été débuté, mais il n'est pas encore terminé. La tâche est accomplie à 30 \%.
+
+\subsubsection*{Protocole : Historique de partie}
+La tâche n'a pas été commencée.
+
+\subsubsection*{Protocole de communication : Base de données et affichage de statistiques}
+La tâche n'a pas été commencée.
+
+\subsection*{Gestion du travail en équipe}
+
+Moins de la moitié des personnes ont participé au contenu du dépôt github, parmi ceux qui n'ont pas participé, certains n'ont pas encore réellement investit le projet et d'autres ont travaillés mais sans suivre les attributions. Il n'est pas envisageable que le projet continue comme ça, il a donc été convenu qu'il fallait que tout le monde s'investisse au plus vite afin de ne pas prendre plus de retard et que la répartition du travail reste plus ou moins équilibrée. Il a été signalé que si la situation ne changeait pas d'ici la prochaine réunion, les problèmes remonteraient au responsable pédagogique afin de ne pas attendre d'être à la moitié du projet avant de faire une remarque sur ce type de dysfonctionnement.
+
+\subsection*{Document de spécification}
+Il a été convenu que chaque membre devait étudier le plan du document de spécification pendant la semaine pour y apporter des remarques ou des modifications. Ainsi, il serait plus facile de discuter et de finaliser une première version du document à la prochaine réunion.
+
+\subsection*{Documentation de git}
+Il a été dit que ceux qui ne sont pas habitués à l'utilisation de git doivent lire un peu de documentation\footnote{Entre les liens qui ont été distribués à l'intérieur du groupe et ceux qui nous ont été fournis par le responsable pédagogique, il y a de la documentation disponible}. L'outil pull request a particulièrement été pointé du doigt, si l'on souhaite faire valider toutes les modifications par quelqu'un d'autre que son auteur, il est en effet nécessaire que nous soyons tous à l'aise avec celui-ci.
+
+\subsection*{Mail du client}
+Une discussion a eu lieu à propos d'un mail du client proposant de fixer aléatoirement le nombre d'essais nécessaires pour découvrir les portes secrètes pour chaque carte. Cette solution permet essentiellement les avantages suivants.
+\begin{itemize}
+\item Une amélioration de la possibilité de reproduire les résultats.
+\item Une manière de limiter l'aléatoire pour mieux comparer les bots.
+\end{itemize}
+Cependant, cette modification implique une assez grande intrusion sur le code et donc une clarté réduite des modifications ainsi qu'une charge de travail plus importante avant de faire fonctionner l'outil de replay. Or, apparemment la graine aléatoire semble suffire à reproduire les résultats et limiter l'aléatoire introduirait aussi un souci de mauvaise instance sur certaines maps. Il nous semble donc pas prioritaire d'intégrer cette modification à notre planning dans l'immédiat. Cependant, nous la gardons à l'esprit pour si nous avons du temps disponible une fois que les premiers bots tourneront. 
+
+\subsection*{Prochaine réunion}
+Il a été décidé que la prochaine réunion aurait lieu le lundi 19 novembre à 13h30.
+
+\end{document}
