@@ -21,7 +21,7 @@
   </calendars>
   <tasks>
     <task id="1" name="Modifications du noyau" note="" work="604800" start="20121107T000000Z" end="20130125T170000Z" work-start="20121107T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="2" name="Modification mode &quot;Recherche de portes Secretes&quot;" note="" work="201600" start="20121107T000000Z" end="20121130T104000Z" work-start="20121107T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="2" name="Modification mode &quot;Recherche de portes Secretes&quot;" note="" work="201600" start="20121107T000000Z" end="20121130T104000Z" work-start="20121107T080000Z" percent-complete="25" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20121107T000000Z"/>
       </task>
       <task id="3" name="Modification mode &quot;Combat&quot;" note="" work="403200" start="20130111T170000Z" end="20130125T170000Z" work-start="20130112T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
@@ -31,16 +31,16 @@
       </task>
     </task>
     <task id="4" name="Description des modes" note="" work="288000" start="20121105T000000Z" end="20130111T170000Z" work-start="20121105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="5" name="Description mode &quot;Recherche de portes Secr&#xE8;tes&quot;" note="" work="86400" start="20121105T000000Z" end="20121106T120000Z" work-start="20121105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="5" name="Description mode &quot;Recherche de portes Secr&#xE8;tes&quot;" note="" work="86400" start="20121105T000000Z" end="20121106T120000Z" work-start="20121105T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
       <task id="6" name="Description mode &quot;Combat&quot;" note="" work="201600" start="20130105T000000Z" end="20130111T170000Z" work-start="20130105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="start-no-earlier-than" time="20130105T000000Z"/>
       </task>
     </task>
-    <task id="7" name="Protocole : interface &lt;-&gt; bot" note="" work="403200" start="20121107T000000Z" end="20121118T142000Z" work-start="20121107T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="7" name="Protocole : interface &lt;-&gt; bot" note="" work="403200" start="20121107T000000Z" end="20121118T142000Z" work-start="20121107T080000Z" percent-complete="70" priority="0" type="normal" scheduling="fixed-work">
       <constraint type="must-start-on" time="20121107T000000Z"/>
     </task>
     <task id="8" name="Interface nethack/bot/outils statistiques" note="" work="1814400" start="20121105T000000Z" end="20121203T154000Z" work-start="20121105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="9" name="I/O Noyau" note="" work="403200" start="20121111T170000Z" end="20121201T170000Z" work-start="20121112T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="9" name="I/O Noyau" note="" work="403200" start="20121111T170000Z" end="20121201T170000Z" work-start="20121112T080000Z" percent-complete="25" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="13" type="FS"/>
         </predecessors>
@@ -60,9 +60,9 @@
           <predecessor id="1" predecessor-id="27" type="FS"/>
         </predecessors>
       </task>
-      <task id="13" name="Compr&#xE9;hension I/O nethack" note="" work="201600" start="20121105T000000Z" end="20121111T170000Z" work-start="20121105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="13" name="Compr&#xE9;hension I/O nethack" note="" work="201600" start="20121105T000000Z" end="20121111T170000Z" work-start="20121105T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
-    <task id="14" name="Protocole : interface &lt;-&gt; BDD" note="" work="403200" start="20121107T000000Z" end="20121116T104000Z" work-start="20121107T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="14" name="Protocole : interface &lt;-&gt; BDD" note="" work="403200" start="20121107T000000Z" end="20121116T104000Z" work-start="20121107T080000Z" percent-complete="30" priority="0" type="normal" scheduling="fixed-work">
       <constraint type="must-start-on" time="20121107T000000Z"/>
     </task>
     <task id="15" name="StarterPackage" note="" work="806400" start="20121118T142000Z" end="20130125T170000Z" work-start="20121118T142000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
