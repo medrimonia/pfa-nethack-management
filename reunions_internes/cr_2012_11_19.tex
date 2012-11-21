@@ -1,0 +1,139 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+
+\geometry{margin=2cm}
+
+
+\newcommand {\ST}{Sven Taton}
+\newcommand {\QL}{Qiwen Lu}
+\newcommand {\LL}{Louis Leclec'h}
+\newcommand {\DB}{David Bitonneau}
+\newcommand {\AH}{Arthur Havlicek}
+\newcommand {\BR}{Benoit Ruelle}
+\newcommand {\LH}{Ludovic Hofer}
+
+\begin{document}
+
+\section*{PFA-Nethack : Compte-rendu de la réunion interne du 5 novembre 2012}
+
+\subsection*{Présents}
+\begin{itemize}
+\item \LL
+\item \BR
+\item \AH
+\item \ST
+\item \DB
+\item \LH
+\end{itemize}
+
+\subsection*{Tâches}
+Un point a été fait sur les tâches qui étaient sensées être commencées,
+avancées ou terminées pendant la semaine.
+
+\subsubsection*{Recherche de portes : modifications du noyau}
+Des patchs ont été produits sur certaines modifications du noyau, la
+recherche de la désactivation des objets a été approfondie et il semble que
+ce soit assez compliqué. La transmission de statistiques à la fin de la
+partie reste à déclencher. La tâche est estimée accomplie à 30 \% (25 \%
+lors de la dernière réunion).
+
+\subsubsection*{Protocole de communication : interface et bot}
+Le protocole est terminé dans l'ensemble, cependant il a été déterminé au
+cours de la réunion qu'il est nécessaire d'ajouter la gestion d'une graine
+aléatoire. La tâche est estimée accomplie à 100 \%, étant donné que les
+ajouts et modifications restants ne sont que de légers ajustement.
+
+\subsubsection*{I/O interface noyau}
+Des tests ainsi que de la factorisation ont été effectués afin de détecter
+plus facilement des problèmes silencieux ainsi que de simplifier le débogage.
+Le traitement de certaines commandes a été ajouté, mais il en restes
+certaines à implémenter. La tâche est estimée accomplie à 40 \% (25 \% lors
+de la dernière réunion).
+
+\subsubsection*{I/O interface bot}
+Cette tâche n'a pas encore pu être commencée. Cependant étant donné que le
+protocole est prêt, il est possible de commencer la tâche.
+
+\subsubsection*{I/O interface BDD}
+Le protocole n'est pas encore terminé, la tâche n'a donc pas pu être
+commencée.
+
+\subsubsection*{Sauvegarde de l'historique des parties}
+Il a été déterminé qu'il suffisait de conserver la graine utilisée par le
+noyau pour assurer que celui-ci ait un comportement déterministe. Il a été
+déterminé au cours de la réunion que l'interface fournirait une graine
+aléatoire au bot et que ce serait à celui-ci d'assurer un comportement
+déterministe en fonction de cette graine.
+
+\subsubsection*{Protocole : interface BDD}
+Il a été déterminé que nous utiliserions du xml en transition entre
+l'interface et la base de données, permettant ainsi de créer de nouvelles
+tables à la volée. Un exemple est déjà fourni, le formalisme reste à faire.
+La tâche est estimée accomplie à 60 \% (30 \% lors de la dernière réunion).
+
+\subsubsection*{Starter Package : mode recherche de portes}
+Une version java nécessitant encore quelques modifications légères (lecture
+depuis une socket à la place de lecture depuis l'entrée standard et prise en
+charge de la graine envoyée par l'interface). La tâche est estimée accomplie
+à 50 \% (Deux starters packages étant requis).
+
+\subsubsection*{Outils Statistique}
+La tâche n'a pas été commencée.
+
+\subsubsection*{Protocole de communication : Base de données et affichage de
+statistiques}
+Le protocole a été débuté mais il doit encore être mis sur le wiki. La tâche
+est estimée accomplie à 10 \%.
+
+\subsubsection*{Affichage des statistiques}
+La tâche n'a pas été commencée.
+
+\subsubsection*{Outil de replay}
+Le principe a été validé, mais l'implémentation doit encore être faîte. La
+tâche est estimée accomplie à 15 \%.
+
+\subsubsection*{Protocole : Historique de partie}
+Une idée assez précise semble fonctionner, mais rien n'a encore été rédigé.
+La tâche est estimée accomplie à 15 \%.
+
+\subsection*{Gestion du travail en équipe}
+Certaines personnes qui n'avaient pas encore travaillé sur le sujet ont
+commencé à s'y mettre, cependant, leurs avancées n'ont pas été mises à
+disposition des autres, l'accent a donc été mis sur le fait qu'il était
+nécessaire de mettre les avancées en ligne.\\
+Différents problèmes ont été évoqués par différentes personnes. Afin
+d'assurer la meilleur entente possible dans le groupe, ainsi qu'une
+participation possible pour chacun, on a tenté d'y trouver des solutions.\\
+Pour certains, une frustration est ressentie car leurs idées et leur travail
+n'ont pas été retenus, l'importance de s'accorder sur des points pouvant
+être litigieux avant de commencer à coder à donc été soulignée, afin que ce
+type de problème ne se répète pas.\\
+Un autre problème soulevé est le fait que certains se sentent un peu dépassés
+par les termes ou encore les outils utilisés. Il leur a donc été signalé
+qu'il ne fallait pas qu'ils hésitent à poser leurs questions par mail afin
+qu'ils ne restent pas bloqués.\\
+Il y a aussi un problème d'approche, car certains ne sont
+pas vraiment familier avec le développement en parallèle et ont tendance à
+attendre que les autres parties soient finis avant de se mettre à la leur.
+Des explications ont été données pour plus facilement parvenir à travailler
+en équipe.\\
+Un dernier problème évoqué est un malaise pour certains qui n'ont pas envie
+de travailler et que certains décident ensuite si leur travail convient. Ils
+préfèrent avoir l'impression qu'on leur propose des choses plutôt que de se
+sentir supervisés. La remarque a été prise en compte, tout en émettant la
+réserve que ce n'était pas toujours aux mêmes de proposer et qu'il était
+nécessaire que chacun puisse avancer dans son travail seul en sollicitant de
+l'aide s'il est bloqué.
+
+\subsection*{Plan du document de spécification}
+Le plan du document de spécification a été relu en groupe et certaines
+modifications y ont été apportées.
+
+\subsection*{Prochaine réunion}
+Il a été décidé que la prochaine réunion aurait lieu le lundi 26 novembre à 13h30.
+
+\end{document}
