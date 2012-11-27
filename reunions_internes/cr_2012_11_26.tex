@@ -1,0 +1,123 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+
+\geometry{margin=2cm}
+
+
+\newcommand {\ST}{Sven Taton}
+\newcommand {\QL}{Qiwen Lu}
+\newcommand {\LL}{Louis Leclec'h}
+\newcommand {\DB}{David Bitonneau}
+\newcommand {\AH}{Arthur Havlicek}
+\newcommand {\BR}{Benoit Ruelle}
+\newcommand {\LH}{Ludovic Hofer}
+\newcommand {\accomplished}[2]{La tâche est estimée accomplie à #1 \%
+(#2 \% lors de la dernière réunion).}
+
+\begin{document}
+
+\section*{PFA-Nethack : Compte-rendu de la réunion interne du 5 novembre 2012}
+
+\subsection*{Présents}
+\begin{itemize}
+\item \LL
+\item \BR
+\item \AH
+\item \QL
+\item \DB
+\item \LH
+\end{itemize}
+
+\subsection*{Tâches}
+Un point a été fait sur les tâches qui étaient sensées être commencées,
+avancées ou terminées pendant la semaine.
+
+\subsubsection*{Recherche de portes : modifications du noyau}
+Des recherches ont été effectuées sur un moyen de connaître le nombre
+de portes secrètes. Il y a un accès à un tableau correspondant à la map avec
+entre autre un accès au type de la case. Deux types différents ont été trouvés,
+portes secrètes et corridors secrets, il faut déterminer si l'on peut
+considérer que les deux sont du même type ou s'il faut les différencier.
+La communication de ce type de statistiques se fera par un fichier de log lu
+ensuite par le simulateur de partie. La partie de code correspondant à cette
+production n'est pas encore écrite, mais le principe est validé.
+La suppression des objets ne fonctionne pas pour l'instant.
+Le problème de fichier manquant lors du retrait des pièges est encore présent,
+mais uniquement assez tard dans la partie.
+\accomplished{65}{30}
+La tâche est estimée accomplie à 65 \% (30 \% lors de la dernière réunion).
+
+\subsubsection*{I/O interface noyau}
+Il est encore nécessaire de raffiner la documentation et d'établir certaines
+fonctions d'envoi de message au noyau.
+\accomplished{70}{40}
+
+\subsubsection*{I/O interface bot}
+Le côté transmission de message du serveur a été préparé, il reste à faire la
+traduction des commandes reçues ainsi que leur validation.
+\accomplished{10}{0}
+
+\subsubsection*{I/O interface BDD}
+Le terrain a été préparé, mais le protocole reste à finaliser.
+Il est possible de valider la sortie du noyau par le xsd afin de vérifier si
+elle est valide.
+Les avancées majeures ont été du côté de la base de données.
+\accomplished{25}{0}
+
+
+\subsubsection*{Sauvegarde de l'historique des parties}
+Cette avancée est un peu bloquée car il est nécessaire de modifier le code du
+noyau et de l'interface pour faire tourner l'historique.
+\accomplished{50}{25}
+
+
+\subsubsection*{Protocole : interface BDD}
+Il est encore nécessaire de définir le xsd.
+\accomplished{80}{60}
+
+
+\subsubsection*{Starter Package : mode recherche de portes}
+La compatibilité avec la transmission par des socket a été assurée et des
+tests ont été ajoutés.
+\accomplished{50}{50}
+
+\subsubsection*{Outils Statistique}
+Des choix ont été fait concernant la bibliothèque.
+\accomplished{30}{0}
+
+\subsubsection*{Protocole de communication : Base de données et affichage de
+statistiques}
+Il y a un désaccord entre les deux personnes chargées du protocole, apparemment
+la version en ligne ne correspond pas à celle qui va être implémentée.
+\accomplished{10}{10}
+
+\subsubsection*{Affichage des statistiques}
+Quelques réflexions ont eu lieu au sujet de l'affichage souhaité ainsi que des
+moyens pour y parvenir, mais rien n'a encore été concrètement commencé.
+\accomplished{0}{0}
+
+\subsubsection*{Outil de replay}
+L'avancée est bloquée par une attente de la fin de l'interface.
+\accomplished{15}{15}
+
+\subsubsection*{Protocole : Historique de partie}
+La doc spécifique reste toujours à faire, quelques ajouts ont été faits sur
+d'autres wiki, mais il est intéressant d'avoir toutes les informations ayant
+trait à l'historique regroupée dans un seul protocole.
+\accomplished{25}{15}
+
+
+\subsection*{Document de spécification}
+Étant donné qu'il n'y avait pas eu beaucoup d'avancement au cours de la semaine,
+un petit rush a été organisé ou chacun avait une partie à rédiger, puis le
+document a été relu et validé en groupe.
+
+\subsection*{Prochaine réunion}
+Il a été décidé que la prochaine réunion aurait lieu le lundi 3 décembre à
+13h30.
+
+\end{document}
