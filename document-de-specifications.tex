@@ -54,9 +54,38 @@ L'ensemble est destiné à un environnement de type Unix.
 
 Il est demandé qu'une version validant le modèle soit fonctionnel très rapidement, afin de satisfaire cet exigence sans pour autant laisser de côtés les qualités attendues d'un logiciel, deux versions différentes seront présentées : un prototype et une version plus intégrée au noyau.
 
+\subsection{Le prototype}
+Afin que le prototype ne nécessite pas trop de temps de développement, il sera simplifié par rapport au contenu final du projet. Le fonctionnement de l'interface sera inspiré de celui de TAEB, elle sera écrite en perl et assurera deux rôles :
+\begin{itemize}
+\item La traduction de la sortie de ncurses en un protocole simple et formaté de façon à pouvoir être parsé aisément.
+\item La transmission des actions choisies par le bot au noyau.
+\end{itemize}
+Certaines modifications seront apportées au noyau afin qu'il corresponde à un mode d'exploration de portes secrètes.
+
 \begin{center}
   \includegraphics[width=180mm]{diagrammes/proto_archi.eps}
 \end{center}
+
+\subsection{L'architecture du logiciel}
+\begin{center}
+  \includegraphics[width=180mm]{diagrammes/new_archi.eps}
+\end{center}
+
+\subsubsection*{Main code}
+Ce code source sera écrit en c et viendra compléter nethack.
+\subsubsection*{Game Launcher}
+Le lanceur permettra de créer un processus pour nethack puis un processus pour le bot. Il permettra aussi de choisir entre différentes options propre à nos ajouts concernant nethack.
+\subsubsection*{Middle man}
+Cette partie viendra remplacer l'interface usuelle afin de capter directement la sortie de nethack. Les chaînes de caractères transmises aux différents affichages seront donc interprétées afin de reconstruire une représentation avant d'être envoyée au module d'affichage initialement prévu.
+La représentation structurée sera retransmise au bot handler. En fin de partie, un appel à game\_statistics permettra de remplir la base de données.
+\subsubsection*{Bot handler}
+Ce module se sert d'informations structurées pour envoyer des messages faciles à parser aux bots. Il traduira aussi les actions choisies par le bot en actions nethack.
+\subsubsection*{Game statistics}
+Ce module permettra d'accéder aux données qui serviront de point de comparaison des bios,
+\subsubsection*{Database manager}
+Ce module permettra d'ajouter le résultat de parties à la base de données, mais il permettra aussi d'exécuter des requêtes sql sur les tables.
+\subsubsection*{statistic tool}
+Cet outil servira à analyser les performances de nos divers bots et à décider lequel est le plus efficace.
 
 
 \section{Besoins fonctionnels}
