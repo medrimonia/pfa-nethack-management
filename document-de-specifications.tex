@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[francais]{babel}
 
+\usepackage{graphicx}
 \usepackage{lmodern}
 
 \geometry{margin=2cm}
@@ -38,41 +39,11 @@ Nethack est un jeu vidéo de type rogue-like écrit en C sous licence libre. Le 
 
 \section{Modèle conceptuel}
 
-Notre travail ne sera pas constitué uniquement d'écriture de code, il comportera aussi des démarches telles que la production de statistiques ainsi que l'étude de certains problèmes théoriques. Plusieurs parties différentes du travail peuvent être identifiées.
+Il est demandé qu'une version validant le modèle soit fonctionnel très rapidement, afin de satisfaire cet exigence sans pour autant laisser de côtés les qualités attendues d'un logiciel, deux versions différentes seront présentées : un prototype et une version plus intégrée au noyau.
 
-\subsection{Modifications du noyau nethack}
-
-Les règles du jeux n'étant pas les mêmes pour tous les bots, il est nécessaire d'apporter des modifications au noyau afin de présenter des versions simplifiées du problème.  
-
-\subsection{Le simulateur de partie}
-
-Un simulateur de partie devra être proposé, il permettra l'exécution de
-bot divers. Celui-ci sera en charge de différentes tâches : 
-\begin{itemize}
-	\item Convertir les informations fournies par le noyau dans un format manipulable par un bot. Le bot pourra ainsi traiter les informations sans risquer de faire face à de l'inconnu.
-	\item Répercuter les choix du bot sur la partie en cours d'exécution sur le noyau. Signaler les erreurs de celui-ci en interrompant la partie le cas échéant.
-	\item Rejouer des parties.
-	\item Remplir une base de données avec les résultats des parties jouées.
-\end{itemize}
-
-\subsection{Les bots}
-
-Plusieurs bots pourront être présentés, ceux-ci recevront l'état actuel de la partie et prendront une décision puis la transmettront au simulateur de partie.
-
-\subsection{Le replay}
-
-Il faut fournir la possibilité de revisualiser une partie donnée.
-
-\subsection{La base de données}
-
-Les résultats des parties devront être stockés dans une base de données afin de conserver un historique des résultats.
-
-\subsection{L'outil Statistique}
-
-Il est demandé d'écrire un outil statistique permettant de générer des diagrammes à partir des résultats conservés dans la base de données. Ces diagrammes serviront à faire des observations sur l'efficacité des bots.
-
-\emph{Schéma d'architecture à ajouter}
-
+\begin{center}
+  \includegraphics[width=180mm]{diagrammes/proto_archi.eps}
+\end{center}
 
 \section{Besoins fonctionnels}
 
