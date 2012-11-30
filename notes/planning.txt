@@ -1,0 +1,11 @@
+-> 2 possibilités à étudier pour le dév / test
+	 -> dév un coup puis test
+	 -> alternement phase de dévs et phase de tests
+
+-> Phase : Accords sur interfaces
+	 -> établissement des toto.h avec un fake_toto.c correspondant (retours de fonctions bidons mais permettant de compiler)
+	 		-> l'ajout de fonction dans le .h sera autorisé pendant le dév, mais à éviter autant que possible
+
+-> Phase : dév des modules
+	 -> inclus les tests unitaires
+	 

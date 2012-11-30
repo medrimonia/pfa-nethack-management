@@ -1,0 +1,26 @@
+game_launcher :
+							-> permet (suivant les paramètres) de jouer des parties ou d'afficher les statistiques
+							-> possibilité de choisir le mode
+middle_man :
+					 -> simule une interface pour le noyau nethack
+					 		-> reçoit des chaînes de caractères
+							-> reconstruit l'information obtenue
+					 -> forward les char * reçus sur l'affichage souhaité
+					 -> ignore les entrées de l'affichage
+					 -> transmet des informations structurées au bot_handler
+					 -> réceptionne les informations que répercute le bot handler
+bot_handler :
+						-> Traduit les informations structurées en message pour le bot
+						-> Traduit les messages du bot en commande nethack
+						-> Génère des erreurs dans le cas de commandes invalides
+							 -> transmission d'un message d'erreur au bot
+							 -> signal d'erreur dans le simulateur
+game_statistics :
+								-> enregistre toutes les données que l'on souhaite sauvegarder.
+								-> possède une fonction permettant d'envoyer les statistiques reçues dans la base de données (à travers le db_manager
+db_manager :
+					 -> permet d'ouvrir/fermer la connexion avec la base de données
+					 -> permet d'exécuter des requêtes sql sur la base de données
+					 -> permet de faire des ajouts de partie dans la base de données
+statistic_tool :
+							 -> se sert des fonctions du db_manager pour récupérer les informations souhaitées puis produit un/des graphes à partir de celles-ci
