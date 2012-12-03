@@ -6,3 +6,6 @@ document-de-specifications.pdf : document-de-specifications.dvi diagrammes/plann
 
 document-de-specifications.dvi : document-de-specifications.tex
 	latex document-de-specifications.tex
+
+clean:
+	rm -rf *.log *.aux *.dvi *~
