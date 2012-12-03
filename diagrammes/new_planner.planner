@@ -144,14 +144,14 @@
       <task id="31" name="starter_package python" note="" work="403200" start="20121228T000000Z" end="20130110T170000Z" work-start="20121228T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="start-no-earlier-than" time="20121228T000000Z"/>
       </task>
-      <task id="32" name="bots python" note="" work="1612800" start="20130202T170000Z" end="20130218T170000Z" work-start="20130203T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="32" name="bots python" note="" work="1843200" start="20130202T170000Z" end="20130218T170000Z" work-start="20130203T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="29" type="FS"/>
           <predecessor id="1" predecessor-id="40" type="FS"/>
           <predecessor id="1" predecessor-id="31" type="FS"/>
         </predecessors>
       </task>
-      <task id="33" name="bots javas" note="" work="1612800" start="20130202T170000Z" end="20130218T170000Z" work-start="20130203T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="33" name="bots javas" note="" work="1382400" start="20130202T170000Z" end="20130218T170000Z" work-start="20130203T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="29" type="FS"/>
           <predecessor id="1" predecessor-id="40" type="FS"/>
@@ -277,8 +277,7 @@
     <allocation task-id="20" resource-id="6" units="10"/>
     <allocation task-id="10" resource-id="6" units="50"/>
     <allocation task-id="8" resource-id="6" units="50"/>
-    <allocation task-id="33" resource-id="7" units="50"/>
-    <allocation task-id="32" resource-id="7" units="50"/>
+    <allocation task-id="32" resource-id="7" units="100"/>
     <allocation task-id="26" resource-id="7" units="50"/>
     <allocation task-id="25" resource-id="7" units="25"/>
     <allocation task-id="24" resource-id="7" units="25"/>
