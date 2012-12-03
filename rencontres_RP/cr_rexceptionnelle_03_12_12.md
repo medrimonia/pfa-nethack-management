@@ -1,7 +1,6 @@
 # Compte rendu de la réunion exceptionnelle avec le RP et le client du 03/12/2012
 
-## Commentaire sur la demande du client et du RP d'opérer un changement de
-direction
+## Commentaire sur la demande du client et du RP d'opérer un changement de direction
 
 * Le RP insiste sur le fait que cette demande a du sens et espère qu'il n'y a
 pas de malentendu.
@@ -20,7 +19,7 @@ Doit-on manipuler des "ordres bots" ou des caractères ?
 
 Réponses des RP et client :
 
-*Plus du langage complexe bot :
+* Les plus du langage complexe bot :
 	* lisibilité et compréhension facile pour un humain ;
 	* vérification des cas d'erreur intégré au langage ;
 	* avoir des logs qui servent de replay (même s'il est possible de séparer
@@ -28,7 +27,7 @@ Réponses des RP et client :
 	* extensible : pouvoir faire des ordres de très haut niveau (un ordre
 	  correspond à une suite d'instruction).
 
-* Plus de reprendre le langage :
+* Les plus de reprendre le langage existant :
 	* faire des ordres court ;
 	* pas besoin de faire un parseur ;
 	* facile à étendre, pas besoin de rajouter de nouveaux "ordres robots"
@@ -62,8 +61,8 @@ on bascule, par la suite, sur une solution en C, plus propre.
 Le prototype est presque utilisable actuellement.
 
 Le RP est enchanté du fait qu'il sera possible de comparer le prototype (en perl)
-et la version finale (en C) puisque le prototype est bientôt terminé.
-Si on a de la chance on pourra dire à la fin : "Mr Renault s'est trompé !"
+et la version finale (en C) puisque le prototype est bientôt terminé.  
+Si on a de la chance on pourra dire à la fin : "Mr Renault s'est trompé !"  
 Amener une caméra pour immortaliser cet événement.
 
 Le RP nous fait remarquer qu'il faut détailler d'avantage les techniques
@@ -73,4 +72,4 @@ langages utilisés.
 Le RP est cependant globalement content du doc de spécification.
 
 
-Prochain rendez-vous RP : le 17/12/2012 à 16h30.
+Prochain rendez-vous RP : le lundi 17/12/2012 à 16h30.
