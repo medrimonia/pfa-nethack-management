@@ -12,7 +12,7 @@
 
 \newcommand {\ST}{Sven Taton}
 \newcommand {\QL}{Qiwen Lu}
-\newcommand {\LL}{Louis Le clec'h}
+\newcommand {\LL}{Louis Le Clec'h}
 \newcommand {\DB}{David Bitonneau}
 \newcommand {\AH}{Arthur Havlicek}
 \newcommand {\BR}{Benoit Ruelle}
@@ -25,20 +25,79 @@
 \begin{document}
 
 \begin{center}
-	{\Huge{Un bot pour NetHack \\ \vspace{2cm} Document de spécification des besoins}}
+  
+  \begin{center}
+    \begin{tabular}{c}
+      
+      \includegraphics [width=80mm]{Images/ENSEIRB-MATMECA.jpg} \\
+      
+      
+      
+         
+      \includegraphics [width=70mm]{Images/logo-LaBRI-couleur.jpg}\\
+      
+      
+    \end{tabular}
+    
+    
+      
+    \textsc{\Large Document de spécification des besoins}\\[0.5cm]
+           {\large 16 octobre 2012 - 29 mars 2013}\\
+           
+           
+           \HRule \\[0.4cm]
+                  %{\huge \bfseries \reporttitle}\\[0.4cm]
+                  \HRule \\[1.5cm]
+                  
+                  \begin{center}
+                    
+                    \begin{flushleft} 
+                      \large
+                      \emph{Auteur :}\\
+                      \begin{itemize}
+                        \item - Sven Taton
+                        \item - Qiwen Lu
+                        \item - Louis Le Clec'h
+                        \item - David Bitonneau
+                        \item - Arthur Havlicek
+                        \item - Benoit Ruelle
+                        \item - Ludovic Hofer
+                      \end{itemize}
+                    \end{flushleft}
+                    
+                    
+                    \begin{flushright} 
+                      \large
+                      \emph{Responsables :} \\
+                      \small{pédagogique} - M.~Renault \\
+                      \small{client} - M.~Le Borgne\\
+                    \end{flushright}
+                  \end{center}
+                  
+                  
+                  %\vfill                  
+                  
+                  
+                  
+  \end{center}    
 \end{center}
 
-\vspace{2cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{center}
+%	{\Huge{Un bot pour NetHack \\ \vspace{2cm} Document de spécification des b%esoins}}
+%\end{center}
 
-\noindent {\large Auteurs : Sven Taton, Qiwen Lu, Louis Leclec'h, David Bitonneau, Arthur Havlicek, Benoît Ruelle, Ludovic Hofer}
+%\vspace{2cm}
+
+%\noindent {\large Auteurs : Sven Taton, Qiwen Lu, Louis Le Clec'h, David Bitonneau, Arthur Havlicek, Benoît Ruelle, Ludovic Hofer}
 
 
-\vspace{4.2cm}
+%\vspace{4.2cm}
 
-\noindent{\large{Client : Yvan Le Borgne}}\\
-\noindent{\large{Responsable pédagogique : David Renault}}
-\pagebreak
-
+%\noindent{\large{Client : Yvan Le Borgne}}\\
+%\noindent{\large{Responsable pédagogique : David Renault}}
+%\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 
 Nethack est un jeu vidéo de type rogue-like écrit en C sous licence libre. Le joueur incarne un aventurier chargé par son dieu/sa déesse de récupérer une amulette dans un donjon peuplé de monstres et de trésors. Le jeu se présente sous la forme d'une grille composées de salles, de couloirs les reliant et se joue au tour par tour. Plusieurs interfaces sont proposées : de la représentation en texte en utilisant des codes d'echapement du terminal à l'interface graphique en Qt ou GTK.
