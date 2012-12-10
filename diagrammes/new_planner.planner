@@ -4,9 +4,9 @@
   <phases/>
   <calendars>
     <day-types>
-      <day-type id="0" name="Travaill&#xE9;" description="Un jour de travail normal"/>
-      <day-type id="1" name="Ch&#xF4;m&#xE9;" description="Un jour ch&#xF4;m&#xE9; normal"/>
-      <day-type id="2" name="Utiliser la base" description="Utilise un jour du calendrier de base"/>
+      <day-type id="0" name="Working" description="A default working day"/>
+      <day-type id="1" name="Nonworking" description="A default non working day"/>
+      <day-type id="2" name="Use base" description="Use day from base calendar"/>
     </day-types>
     <calendar id="1" name="D&#xE9;faut">
       <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="0" sun="0"/>
@@ -21,20 +21,20 @@
   </calendars>
   <tasks>
     <task id="1" name="Fin du prototypage" note="" work="1209600" start="20121130T000000Z" end="20121220T170000Z" work-start="20121130T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="2" name="Finition interface externe" note="" work="403200" start="20121130T000000Z" end="20121213T170000Z" work-start="20121130T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="2" name="Finition interface externe" note="" work="403200" start="20121130T000000Z" end="20121213T170000Z" work-start="20121130T080000Z" percent-complete="71" priority="0" type="normal" scheduling="fixed-work"/>
       <task id="3" name="Test de recette" note="" work="403200" start="20121213T170000Z" end="20121220T170000Z" work-start="20121214T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="4" type="FS"/>
           <predecessor id="1" predecessor-id="2" type="FS"/>
         </predecessors>
       </task>
-      <task id="4" name="Finalisation des modifications noyaux" note="" work="403200" start="20121130T000000Z" end="20121213T170000Z" work-start="20121130T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="4" name="Finalisation des modifications noyaux" note="" work="403200" start="20121130T000000Z" end="20121213T170000Z" work-start="20121130T080000Z" percent-complete="70" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
     <task id="5" name="Accords sur interfaces" note="" work="1008000" start="20121130T000000Z" end="20121206T170000Z" work-start="20121130T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="6" name="bot_handler" note="" work="201600" start="20121130T000000Z" end="20121206T170000Z" work-start="20121130T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="6" name="bot_handler" note="" work="201600" start="20121130T000000Z" end="20121206T170000Z" work-start="20121130T080000Z" percent-complete="80" priority="0" type="normal" scheduling="fixed-work"/>
       <task id="7" name="middle_man" note="" work="201600" start="20121130T000000Z" end="20121206T170000Z" work-start="20121130T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
       <task id="8" name="game_statistics" note="" work="201600" start="20121130T000000Z" end="20121206T170000Z" work-start="20121130T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      <task id="9" name="db_manager" note="" work="201600" start="20121130T000000Z" end="20121206T170000Z" work-start="20121130T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="9" name="db_manager" note="" work="201600" start="20121130T000000Z" end="20121206T170000Z" work-start="20121130T080000Z" percent-complete="90" priority="0" type="normal" scheduling="fixed-work"/>
       <task id="10" name="statistic_tool" note="" work="201600" start="20121130T000000Z" end="20121206T170000Z" work-start="20121130T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
     </task>
     <task id="11" name="D&#xE9;veloppement des modules" note="" work="4377600" start="20121206T170000Z" end="20130111T170000Z" work-start="20121207T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
@@ -72,7 +72,7 @@
           <predecessor id="1" predecessor-id="6" type="FS"/>
         </predecessors>
       </task>
-      <task id="19" name="db_manager" note="" work="806400" start="20121206T170000Z" end="20130103T170000Z" work-start="20121207T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="19" name="db_manager" note="" work="806400" start="20121206T170000Z" end="20130103T170000Z" work-start="20121207T080000Z" percent-complete="30" priority="0" type="normal" scheduling="fixed-work">
         <predecessors>
           <predecessor id="1" predecessor-id="9" type="FS"/>
         </predecessors>
