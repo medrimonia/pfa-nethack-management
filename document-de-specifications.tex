@@ -28,15 +28,11 @@
     \begin{tabular}{c}
       
       \includegraphics [width=80mm]{ENSEIRB-MATMECA.jpg} \\
-      
-      
-      
          
       \includegraphics [width=70mm]{logo-LaBRI-couleur.jpg}\\
       
       
     \end{tabular}
-    
     
       
     \textsc{\Large Document de spécification des besoins}\\[0.5cm]
@@ -53,13 +49,13 @@
                       \large
                       \emph{Auteur :}\\
                       \begin{itemize}
-                        \item - Sven Taton
-                        \item - Qiwen Lu
-                        \item - Louis Le Clec'h
-                        \item - David Bitonneau
                         \item - Arthur Havlicek
-                        \item - Benoit Ruelle
+						\item - Benoît Ruelle
+                        \item - David Bitonneau
+                        \item - Louis Le Clec'h
                         \item - Ludovic Hofer
+                        \item - Qiwen Lu
+                        \item - Sven Taton
                       \end{itemize}
                     \end{flushleft}
                     
@@ -98,11 +94,10 @@
 
 Nethack est un jeu vidéo de type rogue-like écrit en C sous licence libre. Le joueur incarne un aventurier chargé par son dieu/sa déesse de récupérer une amulette dans un donjon peuplé de monstres et de trésors. Le jeu se présente sous la forme d'une grille composées de salles, de couloirs les reliant et se joue au tour par tour. Plusieurs interfaces sont proposées : de la représentation en texte en utilisant des codes d'echapement du terminal à l'interface graphique en Qt ou GTK.
 
-Le premier objectif du projet est de produire une base pour la création de bots en fournissant un moyen d'interagir avec le jeu et permettant la génération de statistiques.
-
-Le second objectif est de définir des sous-problèmes du jeu et de créer des bots pouvant évoluer dans les modes de jeux correspondant à ces problèmes, et ainsi permettre la validation de modèle théorique par leur application sur le jeu.
-
-L'ensemble est destiné à un environnement de type Unix.
+L'objectif du projet est d'adapter le jeu pour la résolution de problèmes
+isolés de NetHack par des bots. Il s'agit donc dans un premier temps de produire une base pour la
+création de bots en fournissant un moyen pour les bots d'interagir avec le jeu
+et permettant la génération de statistiques. Dans un second temps, définir des sous-problèmes du jeu et de créer des bots pouvant évoluer dans les modes de jeux correspondant à ces problèmes, et ainsi permettre la validation de modèle théorique par leur application sur le jeu.
 
 
 \section{Modèle conceptuel}
@@ -110,12 +105,14 @@ L'ensemble est destiné à un environnement de type Unix.
 Il est demandé qu'une version validant le modèle soit fonctionnel très rapidement, afin de satisfaire cet exigence sans pour autant laisser de côtés les qualités attendues d'un logiciel, deux versions différentes seront présentées : un prototype et une version plus intégrée au noyau.
 
 \subsection{Le prototype}
-Afin que le prototype ne nécessite pas trop de temps de développement, il sera simplifié par rapport au contenu final du projet. Le fonctionnement de l'interface sera inspiré de celui de TAEB, elle sera écrite en perl et assurera deux rôles :
+Afin que le prototype ne nécessite pas trop de temps de développement, il sera simplifié par rapport au contenu final du projet. Le fonctionnement de l'interface sera inspiré de celui de TAEB, elle sera écrite en Perl et assurera deux rôles :
 \begin{itemize}
-\item La traduction de la sortie de ncurses en un protocole simple et formaté de façon à pouvoir être parsé aisément.
-\item La transmission des actions choisies par le bot au noyau.
+\item La traduction de la sortie sur un terminal du jeu vers un protocole
+simple compris par les bots.
+\item Traduction et transmission des actions choisies par le bot au noyau.
 \end{itemize}
-Certaines modifications seront apportées au noyau afin qu'il corresponde à un mode d'exploration de portes secrètes.
+Le prototype permettra en outre de faire jouer les bots sur des versions
+originales du jeu n'ayant subit aucune modification.
 
 \begin{center}
   \includegraphics[width=180mm]{diagrammes/proto_archi.eps}
@@ -127,14 +124,18 @@ Certaines modifications seront apportées au noyau afin qu'il corresponde à un 
 \end{center}
 
 \subsubsection*{Main code}
-Ce code source sera écrit en c et viendra compléter nethack.
+Ce code source sera écrit en C et viendra compléter nethack.
 \subsubsection*{Game Launcher}
 Le lanceur permettra de créer un processus pour nethack puis un processus pour le bot. Il permettra aussi de choisir entre différentes options propre à nos ajouts concernant nethack.
 \subsubsection*{Middle man}
 Cette partie viendra remplacer l'interface usuelle afin de capter directement la sortie de nethack. Les chaînes de caractères transmises aux différents affichages seront donc interprétées afin de reconstruire une représentation avant d'être envoyée au module d'affichage initialement prévu.
 La représentation structurée sera retransmise au bot handler. En fin de partie, un appel à game\_statistics permettra de remplir la base de données.
 \subsubsection*{Bot handler}
-Ce module se sert d'informations structurées pour envoyer des messages faciles à parser aux bots. Il traduira aussi les actions choisies par le bot en actions nethack.
+Ce module se sert d'informations structurées pour envoyer des messages faciles
+à parser aux bots. Il traduira aussi les actions choisies par le bot en
+actions NetHack et devra assurer le retour à la boucle principale du jeu après
+chaque commande transmise au noyau pour maintenir la synchronisation entre les
+bots et NetHack.
 \subsubsection*{Game statistics}
 Ce module permettra d'accéder aux données qui serviront de point de comparaison des bios,
 \subsubsection*{Database manager}
