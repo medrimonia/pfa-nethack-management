@@ -7,6 +7,7 @@
 
 \usepackage{graphicx}
 \usepackage{lmodern}
+%\usepackage{adjustbox}
 
 \geometry{margin=2cm}
 
@@ -30,8 +31,11 @@
 	\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r}
 
       %\hline
-		\includegraphics [width=40mm]{ENSEIRB-MATMECA.ps} & \includegraphics
-		[width=40mm]{logo-LaBRI-couleur.ps}\\
+		\includegraphics [width=40mm]{ENSEIRB-MATMECA.ps} & 
+    %\adjustbox{valign=m}{
+    \raisebox{0.75\height}
+      {\includegraphics [width=40mm]{logo-LaBRI-couleur.ps}}
+    %}\\
       %\hline
 
     \end{tabular*}
@@ -66,8 +70,8 @@
                     \begin{flushright} 
                       \large
                       \emph{Responsables :} \\
-					  {\small pédagogique} - M.~Renault \\
-						  {\small client} - M.~Le Borgne\\
+					            Pédagogique - M.~Renault \\
+						          Client - M.~Le Borgne\\
                     \end{flushright}
                   \end{center}
                   
